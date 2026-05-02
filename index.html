@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLBS 데일리 리포트</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --cream: #faf6f1;
+      --warm-white: #fffdf9;
+      --amber: #c8863a;
+      --amber-light: #e8b06a;
+      --brown: #3d2b1f;
+      --brown-light: #6b4c35;
+      --gray: #8a7a70;
+      --border: #e8ddd4;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--cream);
+      color: var(--brown);
+      font-family: 'Noto Sans KR', sans-serif;
+      font-weight: 300;
+      line-height: 1.8;
+    }
+
+    header {
+      background: var(--warm-white);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .flame { font-size: 1.4rem; margin-bottom: 0.6rem; }
+
+    .logo-mark {
+      font-size: 0.68rem;
+      letter-spacing: 0.4em;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    header h1 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.7rem;
+      font-weight: 600;
+      color: var(--brown);
+      letter-spacing: 0.05em;
+    }
+
+    header p {
+      font-size: 0.78rem;
+      color: var(--gray);
+      margin-top: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+    }
+
+    .report-date {
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      background: var(--warm-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .section h2 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--brown);
+      margin-bottom: 1.2rem;
+    }
+
+    .trend-item {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trend-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+    .trend-num {
+      font-size: 0.62rem;
+      color: var(--amber);
+      letter-spacing: 0.12em;
+      margin-bottom: 0.25rem;
+    }
+
+    .trend-item p {
+      font-size: 0.88rem;
+      color: var(--brown-light);
+      line-height: 1.75;
+    }
+
+    .trend-source {
+      font-size: 0.72rem;
+      color: var(--gray);
+      margin-top: 0.3rem;
+    }
+
+    .trend-source a {
+      color: var(--amber);
+      text-decoration: none;
+    }
+
+    .plan-grid { display: grid; gap: 0; }
+
+    .plan-row {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1rem;
+      align-items: start;
+      padding: 0.65rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .plan-row:last-child { border-bottom: none; }
+
+    .plan-key {
+      font-size: 0.7rem;
+      color: var(--gray);
+      letter-spacing: 0.04em;
+      padding-top: 0.1rem;
+    }
+
+    .plan-val {
+      font-size: 0.88rem;
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    .insta-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.2rem 1.4rem;
+      font-size: 0.9rem;
+      line-height: 2;
+      color: var(--brown-light);
+      white-space: pre-wrap;
+      word-break: keep-all;
+    }
+
+    .hashtags {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--amber);
+      line-height: 2;
+      word-break: break-all;
+    }
+
+    .archive {
+      margin-top: 3rem;
+    }
+
+    .archive h3 {
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      color: var(--gray);
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .archive-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+
+    .archive-btn {
+      font-size: 0.75rem;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--warm-white);
+      color: var(--brown-light);
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: inherit;
+    }
+
+    .archive-btn:hover, .archive-btn.active {
+      background: var(--amber);
+      color: white;
+      border-color: var(--amber);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.72rem;
+      color: var(--gray);
+      border-top: 1px solid var(--border);
+      letter-spacing: 0.06em;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--gray);
+      font-size: 0.88rem;
+      line-height: 2;
+    }
+
+    @media (max-width: 480px) {
+      header h1 { font-size: 1.35rem; }
+      .section { padding: 1.3rem; }
+      .plan-row { grid-template-columns: 68px 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="flame">🕯️</div>
+  <div class="logo-mark">Be Light · Be Shiny</div>
+  <h1>BLBS 데일리 리포트</h1>
+  <p>캔들 트렌드 · 클래스 기획 · 인스타 초안</p>
+</header>
+
+<div class="container">
+  <div id="report-content" class="loading">리포트를 불러오는 중...</div>
+  <div class="archive" id="archive-section" style="display:none">
+    <h3>지난 리포트</h3>
+    <div class="archive-list" id="archive-list"></div>
+  </div>
+</div>
+
+<footer>BLBS 비엘비스 · 서울 서초구 · @blbs_studio</footer>
+
+<script>
+  let reportsIndex = [];
+
+  async function loadIndex() {
+    try {
+      const res = await fetch('./reports/index.json');
+      reportsIndex = await res.json();
+      renderArchive();
+      if (reportsIndex.length > 0) {
+        loadReport(reportsIndex[0].date);
+      }
+    } catch {
+      document.getElementById('report-content').innerHTML =
+        '<div class="loading">🕯️<br>아직 리포트가 없습니다.<br>내일 오전 9시에 첫 번째 리포트가 생성됩니다.</div>';
+    }
+  }
+
+  async function loadReport(date) {
+    document.querySelectorAll('.archive-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.date === date);
+    });
+    try {
+      const res = await fetch(`./reports/${date}.json`);
+      const data = await res.json();
+      renderReport(data);
+    } catch {
+      document.getElementById('report-content').innerHTML =
+        '<div class="loading">리포트를 불러올 수 없습니다.</div>';
+    }
+  }
+
+  function renderReport(data) {
+    const trendsHtml = data.trends.map((t, i) => `
+      <div class="trend-item">
+        <div class="trend-num">0${i + 1}</div>
+        <p>${t.summary}</p>
+        ${t.source ? `<div class="trend-source"><a href="${t.sourceUrl || '#'}" target="_blank">→ ${t.source}</a></div>` : ''}
+      </div>
+    `).join('');
+
+    document.getElementById('report-content').innerHTML = `
+      <div class="report-date">${formatDate(data.date)}</div>
+      <div class="section">
+        <div class="section-label">오늘의 트렌드</div>
+        <h2>${data.trendTitle || '글로벌 캔들 트렌드'}</h2>
+        ${trendsHtml}
+      </div>
+      <div class="section">
+        <div class="section-label">이번 주 클래스 기획안</div>
+        <h2>${data.plan.name}</h2>
+        <div class="plan-grid">
+          <div class="plan-row"><span class="plan-key">타겟</span><span class="plan-val">${data.plan.target}</span></div>
+          <div class="plan-row"><span class="plan-key">시간 / 가격</span><span class="plan-val">${data.plan.timePrice}</span></div>
+          <div class="plan-row"><span class="plan-key">만드는 것</span><span class="plan-val">${data.plan.materials}</span></div>
+          <div class="plan-row"><span class="plan-key">기획 이유</span><span class="plan-val">${data.plan.reason}</span></div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section-label">인스타그램 초안</div>
+        <div class="insta-box">${data.instagram.body}</div>
+        <div class="hashtags">${data.instagram.hashtags}</div>
+      </div>
+    `;
+  }
+
+  function renderArchive() {
+    if (reportsIndex.length <= 1) return;
+    document.getElementById('archive-section').style.display = 'block';
+    document.getElementById('archive-list').innerHTML = reportsIndex.map(r => `
+      <button class="archive-btn" data-date="${r.date}" onclick="loadReport('${r.date}')">${formatDateShort(r.date)}</button>
+    `).join('');
+  }
+
+  function formatDate(d) {
+    const dt = new Date(d);
+    return `${dt.getFullYear()}년 ${dt.getMonth()+1}월 ${dt.getDate()}일`;
+  }
+
+  function formatDateShort(d) {
+    const dt = new Date(d);
+    return `${dt.getMonth()+1}월 ${dt.getDate()}일`;
+  }
+
+  loadIndex();
+</script>
+</body>
+</html>
