@@ -186,6 +186,52 @@
       word-break: break-all;
     }
 
+    .brand-positioning {
+      background: linear-gradient(135deg, #3d2b1f 0%, #6b4c35 100%);
+      border-radius: 12px;
+      padding: 1.6rem 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .brand-positioning .quote {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: #faf6f1;
+      line-height: 1.9;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-positioning .quote::before { content: '"'; color: var(--amber-light); }
+    .brand-positioning .quote::after  { content: '"'; color: var(--amber-light); }
+
+    .brand-insight-grid {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .insight-item {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+    }
+
+    .insight-tag {
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      color: var(--amber);
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .insight-item p {
+      font-size: 0.88rem;
+      color: var(--brown-light);
+      line-height: 1.75;
+    }
+
     .archive {
       margin-top: 3rem;
     }
@@ -329,6 +375,21 @@
         <div class="insta-box">${data.instagram.body}</div>
         <div class="hashtags">${data.instagram.hashtags}</div>
       </div>
+      ${data.brand ? `
+      <div class="section">
+        <div class="section-label">BLBS 차별화 전략</div>
+        <div class="brand-positioning">
+          <div class="quote">${data.brand.positioning}</div>
+        </div>
+        <div class="brand-insight-grid">
+          ${data.brand.insights.map(item => `
+            <div class="insight-item">
+              <div class="insight-tag">${item.tag}</div>
+              <p>${item.content}</p>
+            </div>
+          `).join('')}
+        </div>
+      </div>` : ''}
     `;
   }
 
