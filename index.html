@@ -234,40 +234,83 @@
 
     .archive {
       margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
     }
 
-    .archive h3 {
+    .archive-title {
       font-size: 0.68rem;
       letter-spacing: 0.22em;
       color: var(--gray);
       text-transform: uppercase;
-      margin-bottom: 1rem;
-      text-align: center;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .archive-count {
+      background: var(--amber);
+      color: white;
+      font-size: 0.62rem;
+      border-radius: 10px;
+      padding: 0.1rem 0.5rem;
+      letter-spacing: 0;
     }
 
     .archive-list {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
+      flex-direction: column;
+      gap: 0.4rem;
     }
 
-    .archive-btn {
-      font-size: 0.75rem;
-      padding: 0.4rem 1rem;
-      border: 1px solid var(--border);
-      border-radius: 20px;
+    .archive-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.85rem 1.1rem;
       background: var(--warm-white);
-      color: var(--brown-light);
+      border: 1px solid var(--border);
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.2s;
+      transition: all 0.18s;
       font-family: inherit;
+      width: 100%;
+      text-align: left;
     }
 
-    .archive-btn:hover, .archive-btn.active {
-      background: var(--amber);
-      color: white;
+    .archive-item:hover, .archive-item.active {
       border-color: var(--amber);
+      background: #fff9f3;
+    }
+
+    .archive-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--border);
+      flex-shrink: 0;
+      transition: background 0.18s;
+    }
+
+    .archive-item:hover .archive-dot,
+    .archive-item.active .archive-dot { background: var(--amber); }
+
+    .archive-date {
+      font-size: 0.72rem;
+      color: var(--gray);
+      flex-shrink: 0;
+      min-width: 68px;
+    }
+
+    .archive-item.active .archive-date { color: var(--amber); }
+
+    .archive-name {
+      font-size: 0.85rem;
+      color: var(--brown-light);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     footer {
@@ -305,8 +348,8 @@
 
 <div class="container">
   <div id="report-content" class="loading">리포트를 불러오는 중...</div>
-  <div class="archive" id="archive-section" style="display:none">
-    <h3>지난 리포트</h3>
+  <div class="archive" id="archive-section">
+    <div class="archive-title">리포트 이력 <span class="archive-count" id="archive-count"></span></div>
     <div class="archive-list" id="archive-list"></div>
   </div>
 </div>
@@ -394,10 +437,13 @@
   }
 
   function renderArchive() {
-    if (reportsIndex.length <= 1) return;
-    document.getElementById('archive-section').style.display = 'block';
+    document.getElementById('archive-count').textContent = reportsIndex.length;
     document.getElementById('archive-list').innerHTML = reportsIndex.map(r => `
-      <button class="archive-btn" data-date="${r.date}" onclick="loadReport('${r.date}')">${formatDateShort(r.date)}</button>
+      <button class="archive-item" data-date="${r.date}" onclick="loadReport('${r.date}')">
+        <span class="archive-dot"></span>
+        <span class="archive-date">${formatDateShort(r.date)}</span>
+        <span class="archive-name">${r.className || '데일리 리포트'}</span>
+      </button>
     `).join('');
   }
 
