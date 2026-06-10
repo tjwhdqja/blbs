@@ -1,0 +1,32 @@
+{
+  "date": "2026-06-10",
+  "trendTitle": "기능성 웰니스 향, '나를 위한 무드 처방'으로 진화",
+  "trends": [
+    {"summary": "2026 럭셔리 캔들은 '웰니스 향'과 조형적 베슬이 핵심. 코코넛·우디·바닐라·앰버에 스파 허브를 더한 '회복과 클리어'를 위한 향이 주류이며, 미니멀 글라스·매트 세라믹·친환경 소재가 디자인을 주도한다.", "source": "Grice Wax & Wicks / The Ignition Co.", "sourceUrl": "https://scentedcandleco.com/industry-news/top-10-scented-candle-trends-for-2026-you-need-to-know/"},
+    {"summary": "원데이 클래스는 1~1.5시간·2~4만원대 포맷이 안정적으로 성장 중. 2026년엔 향·컬러·형태를 개인 맞춤하는 '퍼스널라이즈 경험'과 팀빌딩·소셜 모임용 수요가 동시에 커지고 있다.", "source": "ClassBento / Candlesmaster", "sourceUrl": "https://www.candlesmaster.com/blog/2026-candle-making-trends-unique-candles/"},
+    {"summary": "홈프래그런스는 '의도된 향(Intentional Scent)'의 해. 라벤더·캐모마일·세이지·히노키의 'Unwind', 유칼립투스·민트·녹차의 'Focus' 등 원하는 기분에 맞춰 향을 고르는 무드 처방형 소비가 확산된다.", "source": "Makesy / Elle Cadeaux", "sourceUrl": "https://makesy.com/blogs/news/home-fragrance-trends-for-2026-2027-what-makers-should-be-creating-right-now"},
+    {"summary": "SNS에선 비트에 맞춘 '제품 리빌' 릴스와 ASMR 언박싱·텍스처 클로즈업이 강세. #candles(1,100만)·#soycandles(140만)·#candlemaking 해시태그가 상위권이며, 틱톡이 캔들 발견의 60%를 견인한다.", "source": "Inmagic / best-hashtags", "sourceUrl": "https://inmagic.ai/instagram-reels-trends-today/"},
+    {"summary": "기업 복지는 '웰니스형 팀빌딩'으로 이동. 명상·사운드배스 등 번아웃 케어와 팀 결속을 결합한 체험이 급부상하고, 개인화·유연성·심리적 안전감을 주는 핸즈온 워크숍이 각광받는다.", "source": "Wellhub / The Event Planner Expo", "sourceUrl": "https://wellhub.com/en-us/blog/wellness-and-benefits-programs/corporate-wellness-trends/"},
+    {"summary": "6월 국내 화제작으로 웹툰 원작 SBS '김부장'(6/26 첫방), 학교물 '참교육' 등 직장·일상 공감 드라마가 부상. 직장인의 번아웃·퇴근길 정서를 클래스 테마로 연계할 여지가 크다.", "source": "Dategom / 나무위키", "sourceUrl": "https://dategom.com/26%EB%85%84-6%EC%9B%94-%EB%93%9C%EB%9D%BC%EB%A7%88-%EC%8B%A0%EC%9E%91-ott-%ED%8E%B8%EC%84%B1%ED%91%9C/"}
+  ],
+  "plan": {
+    "name": "퇴근길 무드 처방 캔들 — Unwind & Focus 듀오 클래스",
+    "target": "강남·서초 직장인",
+    "timePrice": "90분 / 1인 4.5만원 (2인 동반 8만원)",
+    "materials": "소이왁스 캔들 2종 제작. ① Unwind: 라벤더·캐모마일·히노키 블렌딩, 매트 세라믹 베슬 / ② Focus: 유칼립투스·민트·녹차 블렌딩, 미니멀 글라스. 퍼스널 컬러 진단 후 본인 톤에 맞춘 왁스 컬러 매칭 + 향 노트 카드 제공.",
+    "reason": "2026 글로벌 트렌드의 핵심인 '기능성 웰니스 향(Unwind/Focus)'을 직장인의 하루 리듬에 그대로 매핑했다. 번아웃 케어 수요와 '의도된 향' 소비, 90분 원데이 포맷이 정확히 겹치는 지점이며, BLBS의 컬러리스트 전문성과 웰니스 포지셔닝을 한 클래스에 응축할 수 있다."
+  },
+  "instagram": {
+    "body": "오늘 하루, 어떤 향이 필요하셨나요? 🌿\n\n긴장을 풀어주는 라벤더·히노키의 Unwind,\n맑게 깨워주는 유칼립투스·민트의 Focus.\n\n퇴근길에 잠깐, 나를 위한 무드를 직접 처방해보세요. 🕯️\n퍼스널 컬러에 맞춘 단 하나의 캔들과 함께요. ✨\n\n서초 예술의전당 근처, BLBS에서 기다릴게요. 💛",
+    "hashtags": "#비엘비스 #blbs #서초캔들공방 #강남원데이클래스 #서초원데이클래스 #예술의전당 #남부터미널 #직장인취미 #퇴근길클래스 #소이캔들 #웰니스캔들 #아로마테라피 #퍼스널컬러 #캔들만들기 #힐링클래스 #커플데이트 #강남데이트 #홈프래그런스 #번아웃극복 #candlemaking"
+  },
+  "brand": {
+    "positioning": "BLBS는 향을 '파는' 곳이 아니라, 오늘의 나에게 필요한 무드를 처방하는 서초의 웰니스 스튜디오입니다.",
+    "insights": [
+      {"tag": "브랜드 스토리", "content": "2026년 캔들은 '회복과 클리어'를 위한 향으로 진화하고 있습니다. 어둠에 빛을 더한 Be Light, Be Shiny의 창세기적 스토리는, 번아웃에 지친 이들에게 '다시 밝아지는 경험'을 약속하는 지금의 트렌드와 정확히 포개집니다. ISFJ 대표의 힐링 경험담은 기능성 웰니스 향이 곧 정서 회복이라는 시대적 흐름에 진정성을 더합니다."},
+      {"tag": "컬러리스트 전문성", "content": "올해 홈프래그런스는 '내가 원하는 기분에 맞춰 고르는' 의도된 향 소비로 이동했습니다. 향뿐 아니라 색까지 나에게 맞춰주는 BLBS의 퍼스널 컬러 기반 제안은, 향과 인테리어·웰니스가 수렴하는 2026 트렌드에서 경쟁사가 따라오기 힘든 차별점입니다. '나만의 톤+나만의 향'이라는 이중 맞춤이 지금 특히 강력하게 작동합니다."},
+      {"tag": "웰니스 스튜디오", "content": "기업 복지가 명상·사운드배스 같은 웰니스형 팀빌딩으로 이동하고, 직장인 번아웃 케어가 핵심 키워드로 떠올랐습니다. Unwind/Focus 향 처방을 핸즈온 경험으로 풀어내는 BLBS의 웰니스 포지셔닝은, 강남·역삼 기업 출강 수요와 직접 맞닿아 지금 가장 유효합니다. 캔들 한 시간이 곧 정서 회복 프로그램이 됩니다."},
+      {"tag": "문화 연계 반응 속도", "content": "6월 '김부장'·'참교육' 등 직장·일상 공감 드라마가 화제이고, SNS에선 ASMR·제품 리빌 릴스가 캔들 발견을 견인합니다. 영화·드라마 이슈를 빠르게 클래스로 옮기는 BLBS의 기획 속도는, '퇴근길 무드 처방' 같은 시의성 있는 테마를 곧바로 릴스 콘텐츠로 전환해 바이럴 흐름에 올라탈 수 있게 합니다."}
+    ]
+  }
+}
